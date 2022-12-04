@@ -6,12 +6,16 @@ export const state = {
     articles: null,
     myTeams: null,
     users: null,
+    adminUsers: null,
+    adminArticles: null,
 };
 
 export const getters = {
     articles: state => state.articles,
     myTeams: state => state.myTeams,
     users: state => state.users,
+    adminUsers: state => state.adminUsers,
+    adminArticles: state => state.adminArticles,
 };
 
 export const mutations = {
@@ -23,6 +27,14 @@ export const mutations = {
     },
     SET_USERS(state, users) {
         state.users = users;
+    },
+
+    // Admin only
+    SET_USERS_FOR_ADMIN(state, users) {
+        state.adminUsers = users;
+    },
+    SET_ARTICLES_FOR_ADMIN(state, articles) {
+        state.adminArticles = articles;
     }
 };
 
@@ -80,5 +92,20 @@ export const actions = {
     async getUsers({ commit }, token) {
         const { data } = await usersRepository.getAll(token);
         commit('SET_USERS', data.data);
+    },
+
+    // Admin
+    async getAllUsers({ commit }, token) {
+        const { data } = await usersRepository.getAll(token);
+        commit('SET_USERS_FOR_ADMIN', data.data);
+    },
+
+    async getUser(_, { userId, token }) {
+        const { data } = await usersRepository.get(userId, token);
+        return data.data;
+    },
+
+    async deleteUser(_, { userId, token }) {
+        await usersRepository.delete(userId, token);
     }
 }

@@ -22,7 +22,7 @@
                     </li>
 
                     <li v-if="isAdmin" class="nav-item">
-                        <router-link :to="{ path: '/dashboard/admin' }" class="nav-link">Admin</router-link>
+                        <router-link :to="{ path: '/dashboard/users' }" class="nav-link">Users</router-link>
                     </li>
 
                     <li v-if="authenticated" class="nav-item">

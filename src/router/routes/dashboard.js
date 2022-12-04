@@ -15,6 +15,9 @@ import TeamsEdit from '@/views/dashboard/TeamsEdit';
 import AddUserToTeam from '@/views/dashboard/AddUserToTeam';
 import TeamUserShow from '@/views/dashboard/TeamUserShow';
 
+// Admin
+import UsersIndex from '@/views/dashboard/UsersIndex';
+import UsersShow from '@/views/dashboard/UsersShow';
 
 export default [
     {
@@ -81,6 +84,18 @@ export default [
                 beforeEnter: middleware.user,
                 component: TeamUserShow
             },
+            {
+                path: 'users',
+                name: 'users_index',
+                beforeEnter: middleware.admin,
+                component: UsersIndex
+            },
+            {
+                path: 'users/:id',
+                name: 'users_show',
+                beforeEnter: middleware.admin,
+                component: UsersShow
+            }
         ]
     },
 ];
