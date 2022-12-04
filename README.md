@@ -2,8 +2,8 @@
 * ~~Sukurti naudotojo sąsajos sprendimą realizuotam REST API~~
 * ~~Responsive layout (bent 1 breakpoint`as, pvz. ties 768px)~~
 * ~~Images prisitaikymas (max-width taisyklė, kad paveikslėlis mažėtų neišlipdamas iš savo konteinerio elemento)~~
-* Naudotojo sąsajos projektas (projektuojamos sąsajos langų wireframe`ai)
-* Header, Content, Footer srityse stilius turėtų būti skirtingas (specifiškas). Srityse turėtų būti bent po keletą skirtingų elementų. Analogiški elementai skirtingose srityse turėtų įgauti skirtingą išvaizdą.
+* ~~Naudotojo sąsajos projektas (projektuojamos sąsajos langų wireframe`ai)~~
+* ~~Header, Content, Footer srityse stilius turėtų būti skirtingas (specifiškas). Srityse turėtų būti bent po keletą skirtingų elementų. Analogiški elementai skirtingose srityse turėtų įgauti skirtingą išvaizdą.~~
 * ~~Panaudoti transitions arba animacijas, pagyvinančius naudotojo sąsają (UI)~~ dialogs naudoja
 * ~~Panaudoti modalinį langą, kuriame pateikiama aktuali/prasminga informacija.~~
 * ~~Realizuoti informacijos įvedimo sąsają, bent su keletu skirtingų tipų input elementų.~~
