@@ -14,7 +14,7 @@
 
 <script>
 
-import repository from "@/api/repository";
+// import repository from "@/api/repository";
 
 export default {
   name: 'posts-index',
@@ -26,14 +26,14 @@ export default {
     }
   },
 
-  async mounted() {
-    try {
-      let { data } = await repository.getPosts();
-      this.posts = data;
-    } catch (error) {
-      this.error = error;
-    }
-  },
+  // async mounted() {
+    // try {
+    //   let { data } = await repository.getPublicArticles();
+    //   this.posts = data;
+    // } catch (error) {
+    //   this.error = error;
+    // }
+  // },
 };
 </script>
 

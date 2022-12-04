@@ -13,7 +13,7 @@ export default {
     return api.delete('http://localhost/api/logout');
   },
 
-  getPosts() {
-    return api.get(`http://localhost/api/posts`);
-  },
+  // getPublicArticles() {
+  //   return api.get(`http://localhost/api/public/articles`);
+  // },
 };
